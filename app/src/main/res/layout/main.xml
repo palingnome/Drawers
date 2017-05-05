@@ -21,17 +21,25 @@
                         android:id="@+id/root"
                         android:focusable="true"
                         android:focusableInTouchMode="true"
-                        android:fitsSystemWindows="true">
-                        <FrameLayout
-                            android:id="@+id/left_drawer"
-                            android:layout_width="300dp"
-                            android:layout_height="match_parent" />
-                        <FrameLayout
-                            android:id="@+id/right_drawer"
-                            android:layout_width="200dp"
-                            android:layout_height="match_parent" />
+                        android:fitsSystemWindows="true"
+                        android:background="@android:color/holo_blue_light">
                     </RelativeLayout>
             </android.support.design.widget.CoordinatorLayout>
+
+            <FrameLayout
+                android:id="@+id/left_drawer"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start">
+                <include layout="@layout/drawer_left" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/right_drawer"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end">
+                <include layout="@layout/drawer_right" />
+            </FrameLayout>
         </android.support.v4.widget.DrawerLayout>
 
     </FrameLayout>
